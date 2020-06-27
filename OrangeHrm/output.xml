@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.2 on win32)" generated="20200627 09:12:27.543" rpa="false">
+<suite id="s1" name="OrangeHrm" source="E:\Robot_Workspace\OrangeHrm">
+<suite id="s1-s1" name="Phase1 TC" source="E:\Robot_Workspace\OrangeHrm\Phase1_TC.robot">
+<kw name="Log To Console" library="BuiltIn" type="setup">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Robot Start..</arg>
+</arguments>
+<status status="PASS" starttime="20200627 09:12:29.990" endtime="20200627 09:12:29.992"></status>
+</kw>
+<test id="s1-s1-t1" name="TC08 Assign Leave for one full day">
+<kw name="OpenUrl" library="common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200627 09:12:29.998" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20200627 09:12:29.997" endtime="20200627 09:12:36.017"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200627 09:12:36.018" endtime="20200627 09:12:38.142"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=frmLogin</arg>
+<arg>60s</arg>
+<arg>PageNotOpen</arg>
+</arguments>
+<status status="PASS" starttime="20200627 09:12:38.143" endtime="20200627 09:12:38.182"></status>
+</kw>
+<status status="PASS" starttime="20200627 09:12:29.995" endtime="20200627 09:12:38.182"></status>
+</kw>
+<kw name="InputCredential" library="common">
+<arguments>
+<arg>${LgCredential}[0]</arg>
+<arg>${LgCredential}[1]</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtUsername</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200627 09:12:38.185" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20200627 09:12:38.184" endtime="20200627 09:12:38.335"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtPassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200627 09:12:38.336" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
+<msg timestamp="20200627 09:12:38.398" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200627 09:12:38.488" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200627 09:12:38.336" endtime="20200627 09:12:38.488"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=btnLogin</arg>
+</arguments>
+<msg timestamp="20200627 09:12:38.489" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20200627 09:12:38.489" endtime="20200627 09:12:42.448"></status>
+</kw>
+<status status="PASS" starttime="20200627 09:12:38.183" endtime="20200627 09:12:42.449"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=div_legend_pim_employee_distribution_legend</arg>
+<arg>60s</arg>
+<arg>Login Failed</arg>
+</arguments>
+<status status="PASS" starttime="20200627 09:12:42.450" endtime="20200627 09:12:44.020"></status>
+</kw>
+<kw name="GoToLeave_Suboption" library="common">
+<arguments>
+<arg>id=menu_leave_assignLeave</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=menu_leave_viewLeaveModule</arg>
+</arguments>
+<msg timestamp="20200627 09:12:44.023" level="INFO">Clicking element 'id=menu_leave_viewLeaveModule'.</msg>
+<status status="PASS" starttime="20200627 09:12:44.022" endtime="20200627 09:12:45.824"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200627 09:12:48.827" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200627 09:12:45.824" endtime="20200627 09:12:48.828"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Suboption_id}</arg>
+</arguments>
+<msg timestamp="20200627 09:12:48.832" level="INFO">Clicking element 'id=menu_leave_assignLeave'.</msg>
+<status status="PASS" starttime="20200627 09:12:48.829" endtime="20200627 09:12:50.038"></status>
+</kw>
+<status status="PASS" starttime="20200627 09:12:44.021" endtime="20200627 09:12:50.038"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=assignBtn</arg>
+<arg>30s</arg>
+<arg>Suboption Page not open</arg>
+</arguments>
+<status status="PASS" starttime="20200627 09:12:50.039" endtime="20200627 09:12:50.070"></status>
+</kw>
+<kw name="ReadExceldataInput" library="common">
+<arguments>
+<arg>1</arg>
+<arg>id=assignleave_txtEmployee_empName</arg>
+</arguments>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<doc>Opens xlsx document file.</doc>
+<arguments>
+<arg>${ExcelPath}</arg>
+<arg>doc_id</arg>
+</arguments>
+<status status="PASS" starttime="20200627 09:12:50.071" endtime="20200627 09:12:50.082"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200627 09:12:52.083" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200627 09:12:50.083" endtime="20200627 09:12:52.084"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num= ${Excel_Row_num}</arg>
+<arg>col_num= ${Col_num}</arg>
+</arguments>
+<assign>
+<var>${CellValue}</var>
+</assign>
+<msg timestamp="20200627 09:12:52.090" level="INFO">${CellValue} = Hannah Flores</msg>
+<status status="PASS" starttime="20200627 09:12:52.085" endtime="20200627 09:12:52.090"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${UIlocator_id}</arg>
+<arg>${CellValue}</arg>
+</arguments>
+<msg timestamp="20200627 09:12:52.094" level="INFO">Typing text 'Hannah Flores' into text field 'id=assignleave_txtEmployee_empName'.</msg>
+<status status="PASS" starttime="20200627 09:12:52.091" endtime="20200627 09:12:52.380"></status>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20200627 09:12:52.381" endtime="20200627 09:12:52.381"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200627 09:12:54.384" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200627 09:12:52.382" endtime="20200627 09:12:54.385"></status>
+</kw>
+<status status="PASS" starttime="20200627 09:12:50.070" endtime="20200627 09:12:54.387"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>id=assignleave_txtLeaveType</arg>
+<arg>FMLA US</arg>
+</arguments>
+<msg timestamp="20200627 09:12:54.391" level="INFO">Selecting options from selection list 'id=assignleave_txtLeaveType' by label FMLA US.</msg>
+<status status="PASS" starttime="20200627 09:12:54.389" endtime="20200627 09:12:54.552"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=assignleave_leaveBalance</arg>
+<arg>30s</arg>
+<arg>Leave Balance Failed</arg>
+</arguments>
+<status status="PASS" starttime="20200627 09:12:54.553" endtime="20200627 09:12:54.588"></status>
+</kw>
+<kw name="ReadExceldataInput" library="common">
+<arguments>
+<arg>3</arg>
+<arg>id=assignleave_txtFromDate</arg>
+</arguments>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<doc>Opens xlsx document file.</doc>
+<arguments>
+<arg>${ExcelPath}</arg>
+<arg>doc_id</arg>
+</arguments>
+<status status="PASS" starttime="20200627 09:12:54.590" endtime="20200627 09:12:54.602"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200627 09:12:56.604" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200627 09:12:54.603" endtime="20200627 09:12:56.605"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num= ${Excel_Row_num}</arg>
+<arg>col_num= ${Col_num}</arg>
+</arguments>
+<assign>
+<var>${CellValue}</var>
+</assign>
+<msg timestamp="20200627 09:12:56.611" level="INFO">${CellValue} = 2020-08-17</msg>
+<status status="PASS" starttime="20200627 09:12:56.606" endtime="20200627 09:12:56.612"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${UIlocator_id}</arg>
+<arg>${CellValue}</arg>
+</arguments>
+<msg timestamp="20200627 09:12:56.616" level="INFO">Typing text '2020-08-17' into text field 'id=assignleave_txtFromDate'.</msg>
+<status status="PASS" starttime="20200627 09:12:56.614" endtime="20200627 09:12:57.146"></status>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20200627 09:12:57.147" endtime="20200627 09:12:57.147"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200627 09:12:59.149" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200627 09:12:57.148" endtime="20200627 09:12:59.150"></status>
+</kw>
+<status status="PASS" starttime="20200627 09:12:54.589" endtime="20200627 09:12:59.152"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>TAB</arg>
+</arguments>
+<msg timestamp="20200627 09:12:59.156" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20200627 09:12:59.157" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20200627 09:12:59.158" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20200627 09:12:59.153" endtime="20200627 09:12:59.231"></status>
+</kw>
+<kw name="ReadExceldataInput" library="common">
+<arguments>
+<arg>3</arg>
+<arg>id=assignleave_txtToDate</arg>
+</arguments>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<doc>Opens xlsx document file.</doc>
+<arguments>
+<arg>${ExcelPath}</arg>
+<arg>doc_id</arg>
+</arguments>
+<status status="PASS" starttime="20200627 09:12:59.234" endtime="20200627 09:12:59.244"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200627 09:13:01.245" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200627 09:12:59.244" endtime="20200627 09:13:01.246"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num= ${Excel_Row_num}</arg>
+<arg>col_num= ${Col_num}</arg>
+</arguments>
+<assign>
+<var>${CellValue}</var>
+</assign>
+<msg timestamp="20200627 09:13:01.252" level="INFO">${CellValue} = 2020-08-17</msg>
+<status status="PASS" starttime="20200627 09:13:01.247" endtime="20200627 09:13:01.253"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${UIlocator_id}</arg>
+<arg>${CellValue}</arg>
+</arguments>
+<msg timestamp="20200627 09:13:01.256" level="INFO">Typing text '2020-08-17' into text field 'id=assignleave_txtToDate'.</msg>
+<status status="PASS" starttime="20200627 09:13:01.255" endtime="20200627 09:13:01.536"></status>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20200627 09:13:01.537" endtime="20200627 09:13:01.537"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200627 09:13:03.539" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200627 09:13:01.537" endtime="20200627 09:13:03.540"></status>
+</kw>
+<status status="PASS" starttime="20200627 09:12:59.232" endtime="20200627 09:13:03.542"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>TAB</arg>
+</arguments>
+<msg timestamp="20200627 09:13:03.547" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20200627 09:13:03.548" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20200627 09:13:03.548" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20200627 09:13:03.544" endtime="20200627 09:13:03.586"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=assignleave_duration_duration</arg>
+<arg>30s</arg>
+<arg>Duration Dropdown not found</arg>
+</arguments>
+<status status="PASS" starttime="20200627 09:13:03.587" endtime="20200627 09:13:03.620"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>id=assignleave_duration_duration</arg>
+<arg>Full Day</arg>
+</arguments>
+<msg timestamp="20200627 09:13:03.621" level="INFO">Selecting options from selection list 'id=assignleave_duration_duration' by label Full Day.</msg>
+<status status="PASS" starttime="20200627 09:13:03.621" endtime="20200627 09:13:03.681"></status>
+</kw>
+<kw name="ReadExceldataInput" library="common">
+<arguments>
+<arg>5</arg>
+<arg>id=assignleave_txtComment</arg>
+</arguments>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<doc>Opens xlsx document file.</doc>
+<arguments>
+<arg>${ExcelPath}</arg>
+<arg>doc_id</arg>
+</arguments>
+<status status="PASS" starttime="20200627 09:13:03.683" endtime="20200627 09:13:03.693"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200627 09:13:05.696" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200627 09:13:03.694" endtime="20200627 09:13:05.697"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num= ${Excel_Row_num}</arg>
+<arg>col_num= ${Col_num}</arg>
+</arguments>
+<assign>
+<var>${CellValue}</var>
+</assign>
+<msg timestamp="20200627 09:13:05.703" level="INFO">${CellValue} = Test Automation Script Running..</msg>
+<status status="PASS" starttime="20200627 09:13:05.698" endtime="20200627 09:13:05.703"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${UIlocator_id}</arg>
+<arg>${CellValue}</arg>
+</arguments>
+<msg timestamp="20200627 09:13:05.706" level="INFO">Typing text 'Test Automation Script Running..' into text field 'id=assignleave_txtComment'.</msg>
+<status status="PASS" starttime="20200627 09:13:05.704" endtime="20200627 09:13:05.995"></status>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20200627 09:13:05.996" endtime="20200627 09:13:05.996"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200627 09:13:07.999" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200627 09:13:05.996" endtime="20200627 09:13:08.000"></status>
+</kw>
+<status status="PASS" starttime="20200627 09:13:03.682" endtime="20200627 09:13:08.002"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200627 09:13:08.353" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200627 09:13:08.003" endtime="20200627 09:13:08.354"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=assignBtn</arg>
+</arguments>
+<msg timestamp="20200627 09:13:08.355" level="INFO">Clicking button 'id=assignBtn'.</msg>
+<status status="PASS" starttime="20200627 09:13:08.354" endtime="20200627 09:13:09.330"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200627 09:13:10.332" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200627 09:13:09.331" endtime="20200627 09:13:10.333"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Successfully Assigned</arg>
+</arguments>
+<msg timestamp="20200627 09:13:10.392" level="INFO">Current page contains text 'Successfully Assigned'.</msg>
+<status status="PASS" starttime="20200627 09:13:10.334" endtime="20200627 09:13:10.392"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200627 09:13:10.720" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200627 09:13:10.393" endtime="20200627 09:13:10.721"></status>
+</kw>
+<kw name="Browserclose" library="common" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200627 09:13:10.722" endtime="20200627 09:13:12.881"></status>
+</kw>
+<status status="PASS" starttime="20200627 09:13:10.721" endtime="20200627 09:13:12.883"></status>
+</kw>
+<doc>Validate Employee able to apply leave for a day</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20200627 09:12:29.993" endtime="20200627 09:13:12.884" critical="yes"></status>
+</test>
+<kw name="Log To Console" library="BuiltIn" type="teardown">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Robot Work Done..</arg>
+</arguments>
+<status status="PASS" starttime="20200627 09:13:12.890" endtime="20200627 09:13:12.893"></status>
+</kw>
+<status status="PASS" starttime="20200627 09:12:27.615" endtime="20200627 09:13:12.893"></status>
+</suite>
+<status status="PASS" starttime="20200627 09:12:27.585" endtime="20200627 09:13:12.905"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="OrangeHrm">OrangeHrm</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Phase1 TC">OrangeHrm.Phase1 TC</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
